@@ -8,6 +8,7 @@ public class XyshwApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(XyshwApplication.class, args);
+        System.out.println("hello world");
     }
 
 }
