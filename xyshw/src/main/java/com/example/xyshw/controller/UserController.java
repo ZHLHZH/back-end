@@ -9,7 +9,10 @@ import com.example.xyshw.session.Session;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.fasterxml.jackson.databind.util.JSONWrappedObject;
 import org.springframework.beans.factory.annotation.Autowired;
+<<<<<<< HEAD
 import org.springframework.data.redis.core.StringRedisTemplate;
+=======
+>>>>>>> ce8f1b32aba4bdbc4f31f9b0e507efa2d4202d67
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -30,6 +33,7 @@ public class UserController {
     @Autowired
     private UserMapper userMapper;
 
+    @CrossOrigin(origins = "*", maxAge = 3600)
     @PostMapping("/register")
     public String register(@RequestBody User user) {
         int code = 200;
