@@ -8,10 +8,7 @@ import com.example.xyshw.model.User;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.fasterxml.jackson.databind.util.JSONWrappedObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
@@ -21,6 +18,7 @@ public class UserController {
     @Autowired
     private UserMapper userMapper;
 
+    @CrossOrigin(origins = "*", maxAge = 3600)
     @PostMapping("/register")
     public String login(@RequestBody User user) {
         int code = 200;
