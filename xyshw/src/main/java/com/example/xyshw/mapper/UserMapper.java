@@ -14,5 +14,8 @@ public interface UserMapper {
     void insert(User user);
 
     @Select("select id from User where userName=#{userName}")
-    List<Integer> selectIdByUserName(@Param("userName") String userName);
+    Integer selectIdByUserName(@Param("userName") String userName);
+
+    @Select("select passWord from User where userName=#{userName}")
+    String selectPaddWordByUserName(@Param("userName") String userName);
 }
